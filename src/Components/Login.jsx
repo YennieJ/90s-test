@@ -1,29 +1,26 @@
 import React from "react";
-
 import * as S from "./Login.styled";
+import { Link, Outlet } from "react-router-dom";
 const Login = () => {
+
+  // 테스트 중
   return (
     <S.Wrapper>
       <h1>YEN & JUNGMIN</h1>
       <nav>
         <ul>
           <li>
-            <button>ID 로그인</button>
+            <Link to="/loginid">ID 로그인</Link>
           </li>
           <li>
-            <button>일회용 번호</button>
+            <Link to="/number">일회용 번호</Link>
           </li>
           <li>
-            <button>QR코드</button>
+            <Link to="qrcode">QR코드</Link>
           </li>
         </ul>
       </nav>
-      <form>
-        <input type="email" />
-        <input type="password" />
-
-        <button>로그인</button>
-      </form>
+      <Outlet/>
     </S.Wrapper>
   );
 };
