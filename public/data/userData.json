@@ -1,0 +1,14 @@
+{
+    "user" : [
+        {
+            "email" : "test1234@test.com",
+            "password" : "123123",
+            "token" : "abc1234"
+        },
+        {
+            "email" : "test5678@test.com",
+            "password" : "123123",
+            "token" : "def5678"
+        }
+    ]
+}
