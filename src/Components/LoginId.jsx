@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as S from "./LoginId.styled";
 
 export default function LoginId() {
-  const [email, setId] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSuccess, setIsSuccess] = useState("");
   const [token, setToken] = useState("");
@@ -10,7 +10,7 @@ export default function LoginId() {
   // Input 입력값 가져오기
   const onHandleInput = (event) => {
     const { name, value } = event.target;
-    if (name === "email") setId(value);
+    if (name === "email") setEmail(value);
     else if (name === "password") setPassword(value);
   };
 
@@ -45,24 +45,27 @@ export default function LoginId() {
   const submitLogin = (event) => {
     event.preventDefault();
     login(email, password);
+    setEmail('');
+    setPassword('');
   };
 
   return (
     <S.Form onSubmit={submitLogin}>
-      <S.Input
-        type="email"
-        name="email"
-        value={email}
-        onChange={onHandleInput}
-        placeholder="아이디"
-      />
-      <S.Input
-        type="password"
-        name="password"
-        value={password}
-        onChange={onHandleInput}
-        placeholder="패스워드"
-      />
+        <S.Input
+          type="email"
+          name="email"
+          value={email}
+          onChange={onHandleInput}
+          placeholder="아이디"
+        />
+      
+        <S.Input
+          type="password"
+          name="password"
+          value={password}
+          onChange={onHandleInput}
+          placeholder="패스워드"
+        />
 
       <S.LoginKeepWrapper>
         <S.Checkbox>
