@@ -1,7 +1,10 @@
 import React from 'react'
 
 export default function Home() {
+
+    const accessToken = localStorage.getItem("accessToken");
+
     return (
-        <div>Home</div>
+        <div>my token: {accessToken}</div>
     )
 }

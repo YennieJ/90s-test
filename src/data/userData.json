@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "user_id": 1,
+            "email": "test1@naver.com",
+            "password": "123123",
+            "token": "abc.abc.abc",
+            "address": {
+                "street": "123 Main Street",
+                "city": "Cityville",
+                "state": "State",
+                "zip_code": "12345"
+            }
+        },
+        {
+            "user_id": 2,
+            "email": "test2@naver.com",
+            "password": "321321",
+            "token": "def.def.def",
+            "address": {
+                "street": "321 Main Street",
+                "city": "Cityville",
+                "state": "State",
+                "zip_code": "54321"
+            }
+        }
+    ]
+}
